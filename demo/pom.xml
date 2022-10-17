@@ -11,6 +11,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>demo</artifactId>
     <version>0.0.9</version>
+    <name>demo</name>
+    <description>demo</description>
+    <url> https://github.com/klover2/OSSRH-85210</url>
 
     <!--  apache 2.0 协议  -->
     <licenses>
