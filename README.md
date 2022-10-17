@@ -292,12 +292,19 @@ pom.xml
 1. 如果你版本号是以 SNAPSHOT 结尾，不会发布 maven 中央仓库。
 2. `<autoReleaseAfterClose>false</autoReleaseAfterClose>` 由于我关闭了自动同步，所以需要在 Staging Repositories 手动点 release 发布
    ![在这里插入图片描述](https://img-blog.csdnimg.cn/09b78d71349b4d4b86951141f3b045d4.png)
+
+
 3. 是否需要发布单元测试文件
 
 ```bash
--DskipTests，不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下
+# -DskipTests，不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下
 
--Dmaven.test.skip=true，不执行测试用例，也不编译测试用例类
+mvn clean deploy -P release -DskipTests
+
+# -Dmaven.test.skip=true，不执行测试用例，也不编译测试用例类
+
+# 需要用引号
+mvn clean deploy -P release '-Dmaven.test.skip=true'
 ```
 
 ## 出现的问题
